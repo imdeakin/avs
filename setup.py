@@ -37,14 +37,15 @@ setup(
     url='https://github.com/respeaker/avs',
     packages=find_packages(include=['avs']),
     include_package_data=True,
-    install_requires=requirements,
+    # install_requires=requirements,
     entry_points={
         'console_scripts': [
             'alexa=avs.main:main',
             'alexa-tap=avs.alexa:main',
             'alexa-auth=avs.auth:main',
             'dueros-auth=avs.auth:main',
-            'alexa-audio-check=avs.check:main'
+            'alexa-audio-check=avs.check:main',
+            'dueros.json=avs.dueros.json'
         ],
     },
     license="GNU General Public License v3",
@@ -62,6 +63,6 @@ setup(
         'Programming Language :: Python :: 3.5',
     ],
     test_suite='tests',
-    tests_require=test_requirements,
-    setup_requires=setup_requirements,
+    # tests_require=test_requirements,
+    # setup_requires=setup_requirements,
 )
